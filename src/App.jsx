@@ -3,6 +3,7 @@ import About from './components/about'
 import Service from './components/service'
 import Testimonial from './components/testimonial'
 import Contact from './components/contact'
+import Footer from './components/footer'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <Service/>
     <Testimonial/>
     <Contact/>
+    <Footer/>
       </div>
     
   )

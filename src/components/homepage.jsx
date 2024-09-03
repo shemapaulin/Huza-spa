@@ -1,4 +1,5 @@
 import pic from '../assets/pic1.jpg'
+import logo1 from '../assets/brand1.png'
 
 const homepage = () => {
     const pic1 ={
@@ -16,7 +17,7 @@ const homepage = () => {
   
   <section className='h-screen '>
   <div className="w-full h-[30%] bg-gray-300 flex flex-row justify-between items-center p-[70px] text-[#415941] font-bold font-lora  ">
-      <h1 className="text-2xl">HUZA MOBILE SPA</h1>
+      <img src={logo1} alt="logo" className='w-[200px] text-[#415941]'/>
 
       <div className="flex flex-row gap-[50px]" >
       <h2>ABOUT</h2>
