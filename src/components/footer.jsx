@@ -4,16 +4,19 @@ import logo1 from '../assets/brand1.png'
 const footer = () => {
   return (
     <>
-   <footer className="px-4 divide-y bg-[#d1d5db] text-gray-800 flex flex-row justify-between items-center h-[250px]  ">
+   <footer className="w-full bg-[#d1d5db] text-gray-800 flex flex-row justify-between items-center h-[250px]  ">
 	<div className='flex flex-row justify-center items-center gap-10'>
 		<img src={logo1} alt="logo" className='w-[200px] text-[#415941]'/>
 		
 			
 			
-            <div className=' flex flex-row justify-center items-center  text-1xl font-lora font-bold text-[#415941]'>
-  <h1>00 000 000</h1>
+            <div className=' flex flex-row gap-4 justify-center items-center  text-1xl font-lora font-bold text-[#415941]'>
+  <h1>+250 787 550 632
+  </h1>
   <h1>|</h1>
-  <h1>500 Terry Francine Street San Francisco</h1>
+  <h1>Kicukiro , Kigali Rwanda</h1>
+  <h1>|</h1>
+  <h1>huzagateway@gmail.com</h1>
 </div>
 </div>
            
@@ -40,7 +43,7 @@ const footer = () => {
 			
 		
 
-	<div className="py-6 text-sm text-center text-gray-600">© 1968 Company Co. All rights reserved.</div>
+	<div className="py-6 text-sm text-center text-gray-600">©Powered by Huza Gateway.</div>
     </div>
 </footer>
     </>

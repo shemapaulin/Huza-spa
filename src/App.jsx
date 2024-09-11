@@ -1,20 +1,17 @@
-import Homepage from './components/homepage'
-import About from './components/about'
-import Service from './components/service'
-import Testimonial from './components/testimonial'
-import Contact from './components/contact'
-import Footer from './components/footer'
 
+
+import { BrowserRouter as Router } from "react-router-dom";
+import MainRoutes from "./components/Routes.jsx";
+import Footer from "./components/footer.jsx";
 function App() {
 
   return (
     <div className="h-screen">
-    <Homepage />
-      <About />
-    <Service/>
-    <Testimonial/>
-    <Contact/>
-    <Footer/>
+   <Router>
+    <MainRoutes />
+     <Footer/>
+    </Router>
+      
       </div>
     
   )
