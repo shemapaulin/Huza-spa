@@ -124,18 +124,30 @@ const MainService = () => {
   return (
     <>
  <div className='h-screen w-screen pb-[1129px]'>
-  <div className="w-full h-[30%] bg-gray-300 flex flex-row justify-between items-center p-[70px] text-[#415941] font-bold font-lora  ">
-    <Link to="/"> 
-      <img src={logo1} alt="logo" className='w-[200px] text-[#415941]'/>
-      </Link>
-      <div className="flex flex-row gap-[50px]" >
-      <h2>ABOUT</h2>
-       <h2>SERVICES</h2> 
-        <h2>PACKAGES</h2>
-          <h2>CONTACT</h2>
+ <div className="w-full h-[30%] bg-gray-300 flex flex-row justify-between items-center p-[70px] text-[#415941] font-bold font-lora">
+  <Link to="/">
+    <img src={logo1} alt="logo" className="w-[200px] text-[#415941]" />
+  </Link>
+
+  <div className="flex flex-row gap-[50px]">
+    <h2>ABOUT</h2>
+    
+    {/* Make Services a dropdown */}
+    <div className="relative group">
+      <h2 className="cursor-pointer">SERVICES</h2>
+      {/* Dropdown menu */}
+      <div className="absolute hidden group-hover:flex flex-col gap-2 bg-gray-200 p-3 rounded-md top-full w-40 shadow-lg z-20 ">
+        <Link to="/services" className="hover:bg-gray-300 p-2">Massage</Link>
+        <Link to="/service2" className="hover:bg-gray-300 p-2">Nail Care</Link>
+        <Link to="/service3" className="hover:bg-gray-300 p-2">Waxxing</Link>
+        <Link to="/service4" className="hover:bg-gray-300 p-2">xxxxxxxxxxx</Link>
       </div>
-     
     </div>
+
+    <h2>BLOG</h2>
+    <h2>TOP LINKS</h2>
+  </div>
+</div>
     <section className='flex justify-center items-center '>
     <div className="w-[80%] h-[1000px]  flex  justify-center items-center z-10 absolute inset-y-[20%]  bg-[#fef2f2]">
         {/**I want to make 6 boxes here each whith image which covers 1/2 of the screen */}

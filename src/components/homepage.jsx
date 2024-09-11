@@ -34,9 +34,9 @@ const homepage = () => {
       <h2 className="cursor-pointer">SERVICES</h2>
       {/* Dropdown menu */}
       <div className="absolute hidden group-hover:flex flex-col gap-2 bg-gray-200 p-3 rounded-md top-full w-40 shadow-lg z-20 ">
-        <Link to="/service1" className="hover:bg-gray-300 p-2">Massage</Link>
+        <Link to="/services" className="hover:bg-gray-300 p-2">Massage</Link>
         <Link to="/service2" className="hover:bg-gray-300 p-2">Nail Care</Link>
-        <Link to="/service3" className="hover:bg-gray-300 p-2">Waxing</Link>
+        <Link to="/service3" className="hover:bg-gray-300 p-2">Waxxing</Link>
         <Link to="/service4" className="hover:bg-gray-300 p-2">xxxxxxxxxxx</Link>
       </div>
     </div>
