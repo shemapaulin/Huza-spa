@@ -1,12 +1,15 @@
 import React from "react";
-import { Route, Routes, useLocation, Navigate } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Home from "./homepage";
 import MainService from "./MainService";
 
-
+// Define your routes here
 const definedRoutes = [
   { path: "/", component: <Home /> },
-  { path: "/services", component: <MainService /> },
+  { path: "/services", component: <MainService serviceType="Massage" /> },
+  { path: "/service2", component: <MainService serviceType="NailCare" /> },
+  { path: "/service3", component: <MainService serviceType="waxing" /> },
+  { path: "/service4", component: <MainService serviceType="facial" /> }
 ];
 
 const getLevenshteinDistance = (a, b) => {
