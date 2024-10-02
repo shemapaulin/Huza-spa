@@ -47,7 +47,7 @@ const MobileNav = () => {
             <Link to="/about">About</Link>
           </li>
           <div className="relative group">
-              <h2 className="cursor-pointer" onClick={closeMenu}>Services</h2>
+              <h2 className="cursor-pointer">Services</h2>
               {/* Dropdown menu */}
               <div className="absolute hidden group-hover:flex flex-col gap-2 bg-gray-200 p-3 rounded-md top-full w-40 shadow-lg z-20">
                 <Link to="/services" className="hover:bg-gray-300 p-1" onClick={closeMenu}>
