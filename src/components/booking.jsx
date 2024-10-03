@@ -3,7 +3,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format } from "date-fns";
 import { useParams, useLocation, Link } from "react-router-dom";
-
+import MobileNav from "./mobonav";
 import armo from "../assets/armo.jpg";
 import deep from "../assets/deep1.jpg";
 import reflee from "../assets/reflee.jpg";
@@ -159,17 +159,44 @@ const BookingRequest = () => {
 
   return (
     <>
-      <div className="w-full h-[30%] bg-gray-300 flex flex-row justify-between items-center p-[70px] text-[#415941] font-bold font-lora animate-fade-down">
-        <Link to="/">
-          <img src={logo1} alt="logo" className="w-[200px] text-[#415941]" />
-        </Link>
-        <div className="flex flex-row gap-[50px]">
-          <h2>
-            <Link to="/about">ABOUT</Link>
-          </h2>
-          {/* Other Links */}
+     <div className="hidden md:flex w-full h-auto md:h-[30%] bg-gray-300 flex-col md:flex-row justify-between items-center p-6 md:p-[32px] text-[#415941] font-bold font-lora m-0">
+          <Link to="/">
+            <img src={logo1} alt="logo" className="w-[150px] md:w-[200px] text-[#415941]" />
+          </Link>
+          <div className="flex flex-col md:flex-row gap-4 md:gap-[50px] mt-4 md:mt-0 items-center">
+            <h2>
+              <Link to="/about">ABOUT</Link>
+            </h2>
+            <div className="relative group">
+              <h2 className="cursor-pointer">SERVICES</h2>
+              <div className="absolute hidden group-hover:flex flex-col gap-2 bg-gray-200 p-3 rounded-md top-full w-40 shadow-lg z-20">
+                <Link to="/services" className="hover:bg-gray-300 p-2">
+                  Massage
+                </Link>
+                <Link to="/service2" className="hover:bg-gray-300 p-2">
+                  Nail Care
+                </Link>
+                <Link to="/service3" className="hover:bg-gray-300 p-2">
+                  Waxing
+                </Link>
+                <Link to="/service4" className="hover:bg-gray-300 p-2">
+                  Facial Service
+                </Link>
+              </div>
+            </div>
+            <h2>BLOG</h2>
+            <div className="relative group">
+              <h2 className="cursor-pointer">TOP LINKS</h2>
+              <div className="absolute hidden group-hover:flex flex-col gap-2 bg-gray-200 p-3 rounded-md top-full w-40 shadow-lg z-20">
+                <a href="https://huzagateway.com/" className="hover:bg-gray-300 p-2">
+                  Travelling
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+
+        <MobileNav />
 
       <div className="container mx-auto">
         <h2 className="text-2xl font-bold my-4">Book Your {service.title}</h2>

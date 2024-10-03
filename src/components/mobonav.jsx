@@ -79,9 +79,7 @@ const MobileNav = () => {
         </ul>
       </motion.div>
     </nav>
-    <br/>
-    <br/>
-    <br/>
+    
     </>
 
   );
