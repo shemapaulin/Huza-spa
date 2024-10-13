@@ -34,7 +34,7 @@ import organic from "../assets/organic.jpg";
 
 dotenv.config();
 
-const REACT_APP_API_KEY  = process.env.API_URL
+
 
 const services = {
   Massage: [
@@ -140,8 +140,8 @@ const BookingRequest = () => {
       };
 
       try {
-        const response = await fetch(`${REACT_APP_API_KEY}/sendBooking/`, {
-          method: "GET",
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/sendBooking/`, {
+          method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
