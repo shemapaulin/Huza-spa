@@ -24,12 +24,12 @@ const transporter = nodemailer.createTransport({
 
 // Email sending endpoint
 app.post('/sendBooking', async (req, res) => {
-  const { email, bookingDetails } = req.body;
+  const { email, bookingDetails,name } = req.body;
 
   const mailOptions = {
     from: email, 
     to: "huzagateway@gmail.com", 
-    subject: `Booking Confirmation for `,
+    subject: `Booking for ${name} `,
     text: `Booking Details: ${bookingDetails}`,
   };
 
