@@ -6,8 +6,14 @@ import bodyParser from 'body-parser';
 const app = express();
 const PORT =  3000;
 
-// Middleware
-app.use(cors());
+const corsOptions = {
+  origin: 'https://huza-spa.vercel.app', 
+  methods: ['GET', 'POST'],              
+  allowedHeaders: ['Content-Type'],      
+  credentials: true                     
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 
