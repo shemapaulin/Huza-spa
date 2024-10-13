@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import dotenv from "dotenv";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format } from "date-fns";
@@ -32,7 +31,6 @@ import renew from "../assets/renew.jpg";
 import deep_clean from "../assets/deep_clean.jpg";
 import organic from "../assets/organic.jpg";
 
-dotenv.config();
 
 
 
@@ -140,7 +138,7 @@ const BookingRequest = () => {
       };
 
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/sendBooking/`, {
+        const response = await fetch(`https://huza-spa-1.onrender.com/sendBooking/`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
