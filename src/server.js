@@ -14,8 +14,8 @@ app.use(bodyParser.json());
 const transporter = nodemailer.createTransport({
   service: 'Gmail', 
   auth: {
-    user: 'shema.talks@gmail.com',
-    pass: 'xhqx lqlv azqw hvpv', 
+    user: 'huzagateway@gmail.com',
+    pass: 'jcuy fuqj crlj emor', 
   },
   tls: {
     rejectUnauthorized: false, 
@@ -28,7 +28,7 @@ app.post('/sendBooking', async (req, res) => {
 
   const mailOptions = {
     from: email, 
-    to: "shema.talks@gmail.com", 
+    to: "huzagateway@gmail.com", 
     subject: `Booking Confirmation for `,
     text: `Booking Details: ${bookingDetails}`,
   };
