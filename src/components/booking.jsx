@@ -32,6 +32,8 @@ import renew from "../assets/renew.jpg";
 import deep_clean from "../assets/deep_clean.jpg";
 import organic from "../assets/organic.jpg";
 
+dotenv.config();
+
 const REACT_APP_API_KEY  = process.env.API_URL
 
 const services = {
@@ -138,7 +140,7 @@ const BookingRequest = () => {
       };
 
       try {
-        const response = await fetch('${REACT_APP_API_KEY}/sendBooking/', {
+        const response = await fetch(`${REACT_APP_API_KEY}/sendBooking/`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
