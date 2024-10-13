@@ -141,7 +141,7 @@ const BookingRequest = () => {
 
       try {
         const response = await fetch(`${REACT_APP_API_KEY}/sendBooking/`, {
-          method: "POST",
+          method: "GET",
           headers: {
             "Content-Type": "application/json",
           },
