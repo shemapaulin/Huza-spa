@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import dotenv from "dotenv";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format } from "date-fns";
@@ -30,6 +31,8 @@ import eyebrow from "../assets/eyebrow.jpg";
 import renew from "../assets/renew.jpg";
 import deep_clean from "../assets/deep_clean.jpg";
 import organic from "../assets/organic.jpg";
+
+const REACT_APP_API_KEY  = process.env.API_URL
 
 const services = {
   Massage: [
@@ -135,7 +138,7 @@ const BookingRequest = () => {
       };
 
       try {
-        const response = await fetch('http://localhost:3000/sendBooking/', {
+        const response = await fetch('${REACT_APP_API_KEY}/sendBooking/', {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
