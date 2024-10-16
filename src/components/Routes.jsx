@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, useLocation, Navigate } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate, matchPath } from "react-router-dom";
 import Home from "./homepage";
 import MainService from "./MainService";
 import AboutPage from "./aboutPage";
@@ -13,7 +13,8 @@ const definedRoutes = [
   { path: "/service3", component: <MainService serviceType="waxing" /> },
   { path: "/service4", component: <MainService serviceType="facial" /> },
   { path: "/about", component: <AboutPage /> },
-  { path: "/booking/:title", component: <BookingRequest  /> },
+  // Dynamic route for booking, keep the ':title' here
+  { path: "/booking/:title", component: <BookingRequest /> },
 ];
 
 const getLevenshteinDistance = (a, b) => {
@@ -53,16 +54,15 @@ const findClosestRoute = (path) => {
 };
 
 const MainRoutes = () => {
-//   const location = useLocation();
-//   const matchedRoute = definedRoutes.find((route) => {
+  const location = useLocation();
+  
+  // Try to match a static or dynamic route
+  const matchedRoute = definedRoutes.find((route) => matchPath(route.path, location.pathname));
 
-//     return !route.path.includes('/:') && route.path === location.pathname;
-//    });
-
-//  if (!matchedRoute) {
-//      const closestRoute = findClosestRoute(location.pathname);
-//      return <Navigate to={closestRoute.path} replace />;
-//    }
+  if (!matchedRoute) {
+    const closestRoute = findClosestRoute(location.pathname);
+    return <Navigate to={closestRoute.path} replace />;
+  }
 
   return (
     <Routes key={location.pathname} location={location}>
