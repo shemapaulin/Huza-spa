@@ -1,12 +1,12 @@
 import React from 'react'
-import logo1 from '../assets/brand1.png'
+import logo1 from '../assets/whiteLogo1.png'
 
 const footer = () => {
   return (
     <>
   <footer className="w-full bg-[#d1d5db] text-gray-800 flex flex-col md:flex-row justify-between items-center px-6 py-8 h-auto md:h-[120px]">
   <div className='flex flex-col md:flex-row justify-center items-center gap-4 md:gap-10'>
-    <img src={logo1} alt="logo" className='w-[150px] md:w-[200px] text-[#415941]' />
+    <img src={logo1} alt="logo" className='w-[150x] md:w-[150px] text-[#415941] h-[100px] object-cover' />
     <div className='flex flex-col md:flex-row gap-1 md:gap-4 justify-center items-center text-sm md:text-1xl font-lora font-bold text-[#415941]'>
       <h1>+250 787 550 632</h1>
       <h1 className="hidden md:block">|</h1>

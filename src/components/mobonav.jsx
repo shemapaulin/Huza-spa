@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { CgMenuRight } from "react-icons/cg";
 import { IoMdClose } from "react-icons/io";
-import logo1 from "../assets/brand1.png";
+import logo1 from "../assets/blackLogo1.png";
 
 const menuVariants = {
   hidden: {
@@ -39,7 +39,7 @@ const MobileNav = () => {
           <IoMdClose />
         </div>
         <ul className="h-full flex flex-col justify-center items-center text-black gap-y-8 text-primary font-bold text-3xl cursor-pointer">
-        <img src={logo1} alt="logo" className="w-[150px] md:w-[200px]" />
+        <img src={logo1} alt="logo" className="w-[150px] md:w-[200px] h-[100px] object-cover" />
           <li onClick={closeMenu}>
             <Link to="/">Home</Link>
           </li>

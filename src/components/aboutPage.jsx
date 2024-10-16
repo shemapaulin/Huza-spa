@@ -1,5 +1,5 @@
 import React from 'react'
-import logo1 from '../assets/brand1.png';
+import logo1 from '../assets/blackLogo1.png';
 import { Link } from 'react-router-dom';
 import center from '../assets/center.jpg';
 import MobileNav from './mobonav';
@@ -10,7 +10,7 @@ const aboutPage = () => {
      <section>
      <div className="hidden md:flex w-full h-[10px] md:h-[30%] bg-gray-300 flex-col md:flex-row justify-between items-center p-6 md:py-[7px] md:px-[32px] text-[#415941] font-bold font-lora m-0 animate-fade-down">
           <Link to="/">
-            <img src={logo1} alt="logo" className="w-[200px] text-[#415941]" />
+            <img src={logo1} alt="logo" className="w-[150px] md:w-[180px] text-[#415941] h-[100px] object-cover" />
           </Link>
 
           <div className="flex flex-row gap-[50px]">
