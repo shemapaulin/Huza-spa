@@ -7,13 +7,12 @@ const app = express();
 const PORT =  3000;
 
 const corsOptions = {
-  origin: 'https://huza-spa.vercel.app', 
-  methods: ['GET', 'POST'],              
-  allowedHeaders: ['Content-Type'],      
-  credentials: true                     
+  origin: ['https://huza-spa.vercel.app', 'http://127.0.0.1:5173'], 
+  methods: ['GET', 'POST'],                                       
+  allowedHeaders: ['Content-Type'],                               
 };
-
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));  
 app.use(bodyParser.json());
 
 

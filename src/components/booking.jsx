@@ -124,7 +124,7 @@ const BookingRequest = () => {
     event.preventDefault();
     if (selectedDate && selectedTime && isConfirmed && phoneNumber && email) {
       const formattedDate = format(selectedDate, "yyyy-MM-dd");
-
+  
       const bookingDetails = {
         name,
         phoneNumber,
@@ -132,11 +132,11 @@ const BookingRequest = () => {
         date: formattedDate,
         time: selectedTime,
         language,
-        email, // Use the customer's email for sending booking confirmation
+        email,
         subject: `Booking Confirmation for ${service.title}`,
         bookingDetails: `Name: ${name}\nPhone Number: ${phoneNumber}\nService: ${service.title}\nDate: ${formattedDate}\nTime: ${selectedTime}\nLanguage: ${language}`,
       };
-
+  
       try {
         const response = await fetch(`https://huza-spa-1.onrender.com/sendBooking/`, {
           method: "POST",
@@ -145,20 +145,30 @@ const BookingRequest = () => {
           },
           body: JSON.stringify(bookingDetails),
         });
-
+  
         if (response.ok) {
           alert("Booking confirmed! A confirmation email has been sent.");
+          
+          // Reset form fields
+          setSelectedDate(null);
+          setSelectedTime("");
+          setIsConfirmed(false);
+          setPhoneNumber("");
+          setLanguage("English");
+          setName("");
+          setEmail("");
         } else {
           alert("Failed to send booking confirmation.");
         }
       } catch (error) {
         console.error("Error sending booking:", error);
-        alert("An error occurred while sending the booking."+ error);
+        alert("An error occurred while sending the booking." + error);
       }
     } else {
       alert("Please fill out all fields and confirm your booking.");
     }
   };
+  
 
   return (
     <>
