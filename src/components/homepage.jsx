@@ -1,5 +1,5 @@
 import React from 'react';
-import pic from '../assets/pic1.jpg';
+import pic from '../assets/white1.jpg';
 import logo1 from '../assets/brand1.png';
 import { Link } from 'react-router-dom';
 import About from './about';
@@ -11,33 +11,35 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
-import slide2 from '../assets/slide2.jpg'
-import slide3 from "../assets/slide3.jpg"
+import slide2 from '../assets/white2.jpg'
+import slide3 from "../assets/white4.jpg"
+
 
 const slides = [
   {
     image: pic,
-    title: "Huza Bliss Spa...",
-    description: "Relax",
-    link: "/service",
-    linkText: "Services",
+    title: "Huza Bliss Spa",
+    description: "We aim to make you feel better with our massage service.",
+    link: "/services",
+    linkText: "Massage",
     textAlign: "text-center",
   },
   {
     image: slide2,
     title: "Huza Bliss Spa",
-    description: "Refill",
-    link: "/about",
-    linkText: "About Us",
+    description: "Get satisfied through our waxing service.", 
+    link: "/service3",
+    linkText: "Waxing",
     textAlign: "text-center",
   },
   {
     image: slide3,
     title: "Huza Bliss Spa",
-    description: "Re-build",
-    link: "/services",
-    linkText: "Services",
+    description: "Get your nails done with our nail care service.",
+    link: "/service2",
+    linkText: "Nail Care",
     textAlign: "text-center",
+    
   },
 ];
 
@@ -45,7 +47,7 @@ const Homepage = () => {
   return (
     <>
       <section className="min-h-screen w-screen m-0 p-0">
-        <div className="hidden md:flex w-full h-auto md:h-[30%] bg-gray-300 flex-col md:flex-row justify-between items-center p-6 md:p-[32px] text-[#415941] font-bold font-lora m-0">
+        <div className="hidden md:flex w-full h-[10px] md:h-[30%] bg-gray-300 flex-col md:flex-row justify-between items-center p-6 md:py-[7px] md:px-[32px] text-[#415941] font-bold font-lora m-0">
           <Link to="/">
             <img src={logo1} alt="logo" className="w-[150px] md:w-[200px] text-[#415941]" />
           </Link>
@@ -87,7 +89,7 @@ const Homepage = () => {
         <div id="hero" className="m-0 p-0">
           <Swiper modules={[Autoplay]} autoplay={{ delay: 5000 }} className="relative h-96 sm:h-80 md:h-96 min-h-[600px]">
             {slides.map((slide, index) => (
-              <SwiperSlide key={index} className="relative bg-cover bg-center" style={{ backgroundImage: `url(${slide.image})` }}>
+              <SwiperSlide key={index} className=" bg-cover bg-center bg-fit" style={{ backgroundImage: `url(${slide.image})` }}>
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <div className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center h-full space-y-4 ${slide.textAlign}`}>
                   <h1 className="text-3xl sm:text-4xl md:text-5xl text-white">{slide.title}</h1>

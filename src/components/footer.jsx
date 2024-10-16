@@ -4,7 +4,7 @@ import logo1 from '../assets/brand1.png'
 const footer = () => {
   return (
     <>
-  <footer className="w-full bg-[#d1d5db] text-gray-800 flex flex-col md:flex-row justify-between items-center px-6 py-8 h-auto md:h-[250px]">
+  <footer className="w-full bg-[#d1d5db] text-gray-800 flex flex-col md:flex-row justify-between items-center px-6 py-8 h-auto md:h-[120px]">
   <div className='flex flex-col md:flex-row justify-center items-center gap-4 md:gap-10'>
     <img src={logo1} alt="logo" className='w-[150px] md:w-[200px] text-[#415941]' />
     <div className='flex flex-col md:flex-row gap-1 md:gap-4 justify-center items-center text-sm md:text-1xl font-lora font-bold text-[#415941]'>

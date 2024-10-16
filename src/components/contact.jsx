@@ -35,7 +35,7 @@ const contact = () => {
           <textarea className="w-full bg-yellow-50 border-b border-gray-400 focus:outline-none focus:border-blue-500 py-2" />
         </div>
         <div className="flex justify-center">
-          <button type="submit" className="w-[130px] md:w-[161px] h-[40px] md:h-[50px] bg-[#415941] text-white font-semibold">
+          <button type="submit" className="w-[130px] md:w-[161px] h-[40px] md:h-[50px]  bg-gradient-to-r from-blue-600 to-violet-600 rounded-full text-white font-semibold">
             Submit
           </button>
         </div>

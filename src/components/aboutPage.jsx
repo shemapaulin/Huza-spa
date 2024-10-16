@@ -8,7 +8,7 @@ const aboutPage = () => {
   return (
     <>
      <section>
-     <div className="hidden md:flex w-full h-[30%] bg-gray-300 flex flex-row justify-between items-center p-[70px] text-[#415941] font-bold font-lora animate-fade-down">
+     <div className="hidden md:flex w-full h-[10px] md:h-[30%] bg-gray-300 flex-col md:flex-row justify-between items-center p-6 md:py-[7px] md:px-[32px] text-[#415941] font-bold font-lora m-0 animate-fade-down">
           <Link to="/">
             <img src={logo1} alt="logo" className="w-[200px] text-[#415941]" />
           </Link>

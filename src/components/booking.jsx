@@ -36,37 +36,37 @@ import organic from "../assets/organic.jpg";
 
 const services = {
   Massage: [
-    { img: candle, id: 1, title: "Candle Massage", price: "$100" },
-    { img: deep, id: 2, title: "Deep Tissue", price: "$100" },
-    { img: sweddish, id: 3, title: "Swedish", price: "$100" },
-    { img: armo, id: 4, title: "Aroma Therapy", price: "$100" },
-    { img: head, id: 5, title: "Head Massage", price: "$100" },
-    { img: pic, id: 6, title: "Back Massage", price: "$100" },
-    { img: reflee, id: 7, title: "Reflexology", price: "$100" },
-    { img: sport, id: 8, title: "Sport Massage", price: "$100" },
+    { img: candle, id: 1, title: "Candle Massage", price: "35,000 Rwf" },
+    { img: deep, id: 2, title: "Deep Tissue", price: "30,000 Rwf" },
+    { img: sweddish, id: 3, title: "Swedish", price: "40,000 Rwf" },
+    { img: armo, id: 4, title: "Aroma Therapy", price: "40,000 Rwf" },
+    { img: head, id: 5, title: "Head Massage", price: "25,000 Rwf" },
+    { img: pic, id: 6, title: "Back Massage", price: "30,000 Rwf" },
+    { img: reflee, id: 7, title: "Reflexology", price: "35,000 Rwf" },
+    { img: sport, id: 8, title: "Sport Massage", price: "30,000 Rwf" },
   ],
   NailCare: [
-    { img: acrylic, id: 1, title: "Acrylic Full Size", price: "$100" },
-    { img: ombre, id: 2, title: "Ombre Polish", price: "$100" },
-    { img: dipping, id: 3, title: "Dipping Powder", price: "$100" },
-    { img: reg_pedi, id: 4, title: "Regular Pedicure", price: "$100" },
-    { img: gel_pedi, id: 5, title: "Gel Pedicure", price: "$100" },
-    { img: spa_pedi, id: 6, title: "Spa Pedicure", price: "$100" },
-    { img: reg_mani, id: 7, title: "Regular Manicure", price: "$100" },
-    { img: gel_mani, id: 8, title: "Gel Manicure", price: "$100" },
-    { img: french, id: 9, title: "French Manicure", price: "$100" },
+    { img: acrylic, id: 1, title: "Acrylic Full Size", price: "20,000 rwf" },
+    { img: ombre, id: 2, title: "Ombre Polish", price: "25,000 rwf" },
+    { img: dipping, id: 3, title: "Dipping Powder", price: "15,000 rwf" },
+    { img: reg_pedi, id: 4, title: "Regular Pedicure", price: "7,000 rwf" },
+    { img: gel_pedi, id: 5, title: "Gel Pedicure", price: "8,000 rwf" },
+    { img: spa_pedi, id: 6, title: "Spa Pedicure", price: "10,000 rwf" },
+    { img: reg_mani, id: 7, title: "Regular Manicure", price: "7,000 rwf" },
+    { img: gel_mani, id: 8, title: "Gel Manicure", price: "10,000 rwf" },
+    { img: french, id: 9, title: "French Manicure", price: "15,000 rwf" },
   ],
   waxing: [
-    { img: braz_wax, id: 1, title: "Brazilian Wax", price: "$100" },
-    { img: bikini, id: 2, title: "Bikini Line Wax", price: "$100" },
-    { img: helf_leg, id: 3, title: "Half leg Wax", price: "$100" },
-    { img: under, id: 4, title: "under arm Wax", price: "$100" },
-    { img: eyebrow, id: 5, title: "eye brow Wax", price: "$100" },
+    { img: braz_wax, id: 1, title: "Brazilian Wax", price: "30,000 rwf" },
+    { img: bikini, id: 2, title: "Bikini Line Wax", price: "20,000 rwf" },
+    { img: helf_leg, id: 3, title: "Half leg Wax", price: "30,000 rwf" },
+    { img: under, id: 4, title: "under arm Wax", price: "10,000 rwf" },
+    { img: eyebrow, id: 5, title: "eye brow Wax", price: "5,000 rwf" },
   ],
   facial: [
-    { img: renew, id: 1, title: "Renew Facial", price: "$100" },
-    { img: deep_clean, id: 2, title: "Deep Cleaning Facial", price: "$100" },
-    { img: organic, id: 3, title: "Organic Freshen Facial", price: "$100" },
+    { img: renew, id: 1, title: "Renew Facial", price: "30,000 rwf" },
+    { img: deep_clean, id: 2, title: "Deep Cleaning Facial", price: "36,000 rwf" },
+    { img: organic, id: 3, title: "Organic Freshen Facial", price: "25,000 rwf" },
   ],
 };
 
@@ -162,7 +162,7 @@ const BookingRequest = () => {
 
   return (
     <>
-     <div className="hidden md:flex w-full h-auto md:h-[30%] bg-gray-300 flex-col md:flex-row justify-between items-center p-6 md:p-[32px] text-[#415941] font-bold font-lora m-0">
+     <div className="hidden md:flex w-full h-[10px] md:h-[30%] bg-gray-300 flex-col md:flex-row justify-between items-center p-6 md:py-[7px] md:px-[32px] text-[#415941] font-bold font-lora m-0">
           <Link to="/">
             <img src={logo1} alt="logo" className="w-[150px] md:w-[200px] text-[#415941]" />
           </Link>
@@ -201,7 +201,7 @@ const BookingRequest = () => {
 
         <MobileNav />
 
-      <div className="container mx-auto">
+      <div className="container mx-auto p-5">
         <h2 className="text-2xl font-bold my-4">Book Your {service.title}</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -255,7 +255,17 @@ const BookingRequest = () => {
               <option value="">--Select Time--</option>
               <option value="10:00 AM">10:00 AM</option>
               <option value="11:00 AM">11:00 AM</option>
-              {/* Other time options */}
+              <option value="10:00 AM">12:00 AM</option>
+              <option value="11:00 AM">01:00 PM</option>
+              <option value="10:00 AM">02:00 PM</option>
+              <option value="11:00 AM">03:00 PM</option>
+              <option value="10:00 AM">04:00 PM</option>
+              <option value="11:00 AM">05:00 PM</option>
+              <option value="10:00 AM">06:00 PM</option>
+              <option value="11:00 AM">07:00 PM</option>
+              <option value="10:00 AM">08:00 PM</option>
+              <option value="11:00 AM">09:00 PM</option>
+             
             </select>
           </div>
           <div>
@@ -282,7 +292,7 @@ const BookingRequest = () => {
           </div>
           <button
             type="submit"
-            className="bg-blue-500 text-white rounded py-2 px-4"
+            className=" bg-gradient-to-r from-blue-600 to-violet-600 text-white rounded py-2 px-4"
           >
             Book Now
           </button>

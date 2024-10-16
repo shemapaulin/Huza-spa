@@ -1,5 +1,6 @@
 import React from "react";
 import relax from "../assets/relax.jpg"
+import { Link } from 'react-router-dom';
 const about = () => {
   return (
     <section className="flex justify-center items-center w-screen min-h-screen animate-fade-in p-4 md:p-0">
@@ -10,9 +11,11 @@ const about = () => {
         <p className="mt-6 md:m-10 text-center md:text-left">
           At Huza Bliss Spa & Beauty, we bring the ultimate relaxation and beauty experience right to your stay or doorstep. Our professional team offers a wide range of services, including personalized massage therapy, nail care, and beauty treatments, all in the comfort and privacy of your home, stay, or preferred location. Whether you’re in need of a therapeutic massage, a manicure, pedicure, or a complete spa experience, we tailor our services to meet your specific needs and preferences.
         </p>
-        <button className="bg-[#415941] font-bold font-lora p-3 md:p-5 flex items-center justify-center mt-4 md:mt-10">
-          <p className="text-white">Read more</p>
+       <Link to="/services">
+       <button className="bg-gradient-to-r from-blue-600 to-violet-600 text-white font-bold font-lora p-3 hover:bg-[#f6e6d2] hover:text-[#415941] md:p-5 flex items-center justify-center mt-4 md:mt-10 rounded-full">
+          <p className="text-white">Get in touch with Us</p>
         </button>
+       </Link>
       </div>
     </div>
   </section>
